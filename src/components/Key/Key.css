@@ -1,0 +1,18 @@
+button.keyboardkey {
+    transition: 0.125s ease background-color, 0.125s ease color;
+}
+
+button.keyboardkey.correct {
+    background-color: rgb(16, 133, 61);
+    color: white;
+}
+
+button.keyboardkey.exists {
+    background-color: rgb(224, 127, 17);
+    color: white;
+}
+
+button.keyboardkey.wrong {
+    background-color: rgb(48, 48, 48);
+    color: white;
+}

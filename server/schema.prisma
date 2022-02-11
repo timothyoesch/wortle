@@ -1,0 +1,22 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./wortle.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Word {
+  id          Int         @id @default(autoincrement())
+  word        String      @default("")
+  lastUsed    Int
+  games       Game[]
+}
+
+model Game {
+  id        Int       @id @default(autoincrement())
+  date      Int
+  word      Word      @relation(fields: [wordId], references: [id])
+  wordId    Int
+}

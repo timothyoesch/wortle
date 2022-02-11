@@ -1,0 +1,25 @@
+.gamefield {
+    transition: calc(0.3s * var(--transitionspeed)) ease transform;
+}
+
+.gamefield.turn {
+    transform: rotate3d(1,0,0,-90deg);
+}
+
+.gamefield.correct {
+    background-color: rgb(16, 133, 61);
+    border-color: rgb(16, 133, 61);
+    color: white;
+}
+
+.gamefield.exists {
+    background-color: rgb(224, 127, 17);
+    border-color: rgb(224, 127, 17);
+    color: white;
+}
+
+.gamefield.wrong {
+    background-color: rgb(48, 48, 48);
+    border-color: rgb(48, 48, 48);
+    color: white;
+}
